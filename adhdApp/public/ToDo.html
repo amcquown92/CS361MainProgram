@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adhdApp.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <a href="MainPage.html" id="back-link">
+    <i class="fas fa-arrow-left btn"></i> Back
+  </a>
+  <main>
+    <h1>MyADHDApp</h1>
+    <p>Let's get your tasks out of your brain, get them down on (digital) paper! Enter your tasks! </p>
+    <p>Optional: You can also add a due date,  description or set a priority level to your tasks.</p>
+    <div class="form-container ">
+        <button id="open-task-form-btn" class="btn add-edit-btn">Add Tasks</button>
+          <form id = "task-form" class="task-form hidden">
+              <div class="task-form-body">
+                  <label class="task-form-label" for="title-input">Task: </label>
+                  <input required type="text" class="form-control" id="title-input" value="" placeholder="Title" />
+                  <label class="task-form-label" for="date-input">Due Date: </label>
+                  <input type="date" class="form-control" id="date-input" value="" />
+                  <label class="task-form-label tooltip">Priority:  <span class="tooltiptext">Rate priority from 1 (lowest) to 5 (highest)</span></label>
+                  <input type ="number" class ="form-control" id="priority-input" value = "" placeholder="priority" min="1" max="5"></textarea>
+                  <label class="task-form-label" for="description-input"></label>
+                  <textarea class="form-control" id="description-input" cols="30" rows="3" placeholder="Descripion: Max 250 characters" maxlength="250"></textarea>
+              </div>
+              <div class="task-form-footer">
+                <button id="close-task-form-btn" class="close-task-form-btn btn delete-btn" type="button" aria-label="close"><i class="fas fa-trash-alt"></i> Delete</button>
+                <button id="add-or-update-task-btn" class="btn add-edit-btn" type="submit"><i class="fas fa-tasks"></i> Add</button>
+              </div>
+          </form>
+        <dialog id="confirm-close-dialog">
+            <form method="dialog">
+              <p id = "discard-msg1" class="discard-message-text">Discard unsaved changes?</p>
+              <p id = "discard-msg2"class="discard-message-text">This action is permanent. Deleted drafts cannot be recovered. Continue?</p>
+              <div class="confirm-close-dialog-btn-container">
+                <button id="cancel-btn" class="btn cancel-btn">
+                  Cancel
+                </button>
+                <button id="discard-btn" class="btn discard-btn">
+                  Discard
+                </button>
+              </div>
+            </form>
+          </dialog>
+        <div id="tasks-container" class="tasks-container"></div>
+    </div>
+  </main>
+  <script src="adhdApp.js"> </script> 
+</body>
+</html>

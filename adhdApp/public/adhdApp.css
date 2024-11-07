@@ -1,0 +1,181 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #007BFF, #FFFFFF);
+    min-height: 100vh; 
+}
+
+main,h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.about {
+    display: block; 
+    width: 100%;
+    max-width: 95%;
+    background: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    margin: 0 auto; 
+    text-align: center; 
+}
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+    max-width: 95%; 
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+    justify-content: center;
+
+}
+
+
+.btn {
+    color: white;
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size:larger;
+    margin-left: 10px;
+
+}
+.delete-btn, .discard-btn{
+    background-color: red;
+
+}.add-edit-btn{
+    background-color: rgb(22, 203, 64);
+}
+.cancel-btn{
+    background-color: #0056b3;
+}
+
+
+.btn:hover {
+    background-color: #0056b3; 
+}
+
+
+.task-form {
+    width: 100%;
+    margin-top: 20px;
+}
+.task-body-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-control{
+    flex: 1 ;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.tasks-container {
+    width: 100%;
+    margin-top: 20px;
+}
+.task {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px; 
+    border-bottom: 1px solid #ddd; 
+}
+.task p {
+    margin: 0 10px 0 0;
+    line-height: 1.5; 
+}
+.task .task-details {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.task .description {
+    flex-basis: 100%; 
+    margin-top: 10px; 
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.hidden {
+    display: none;
+}
+#description-input {
+    width: 100%; 
+    margin-top: 10px; 
+}
+.task-details label {
+    display: flex;
+    align-items: center;
+}
+#back-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #000; 
+    text-decoration: none;
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+input:invalid {
+    border: 2px solid red;
+    background-color: #ffcccc;
+}
+input:focus {
+    border: 2px solid blue;
+    background-color: #e0f0ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5)
+}
+button:focus {
+    border: 2px solid darkblue;
+    outline: none;
+}
